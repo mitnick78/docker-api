@@ -1,0 +1,12 @@
+version: "3"
+services: 
+    database: 
+        ports: 
+            - 10001:5432
+    directus: 
+        volumes: 
+            - ./uploads:/directus/uploads
+            - ./extensions:/directus/extensions
+        environment: 
+            PUBLIC_URL: "https://monserveur.com"
+            LOG_LEVEL: 'error'

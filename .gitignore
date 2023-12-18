@@ -1,0 +1,4 @@
+/secrets/*
+/compose.override.yml
+/database/*
+.DS_Store

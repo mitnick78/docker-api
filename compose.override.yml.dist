@@ -1,0 +1,12 @@
+version: "3"
+services: 
+    database: 
+        ports: 
+            - 00000:5432
+    directus: 
+        volumes: 
+            - ./uploads:/directus/uploads
+            - ./extensions:/directus/extensions
+        environment: 
+            PUBLIC_URL: "http://localhost:8055"
+            LOG_LEVEL: 'debug'
